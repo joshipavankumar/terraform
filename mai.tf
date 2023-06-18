@@ -8,7 +8,7 @@ provider "aws" {
 resource "aws_instance" "one" {
   ami             = "ami-03c7d01cf4dedc891"
   instance_type   = "t2.micro"
-  key_name        = "pavan"
+  key_name        = ""
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1a"
   user_data       = <<EOF
@@ -27,7 +27,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-03c7d01cf4dedc891"
   instance_type   = "t2.micro"
-  key_name        = "pavan"
+  key_name        = ""
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1b"
   user_data       = <<EOF
@@ -68,5 +68,5 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "rahamshaikterra7890prodenv"
+  bucket = ""
 }
